@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Dentro do p, a palavra antes do input não possui uma ligação com o input, é necessário fazer algumas configurações para que ele funcione.
+
+        Caso queira desligar o auto-complete do formulário é só ir no <form> e colocar (autocomplete="off")
+
+        Para guardar o dado que foi digitado no campo de input é só ir até o <form> e adicionar (action="nomedoarquivoJavaScript ou outra linguagem")
+
+        Dentro de todo input com exceção de botão de enviar, é obrigatório ter um name e um id para poder ligar ele a palavra que está escrita antes dele, é necessário envelopar (control+shift+p) a palavra que deseja ligar ao input com um <label> e dentro do label vai vir um parâmetro chamado for="" nesse parâmetro é necessário adicionar o mesmo id do input para ter uma conexão um com o outro.
+        
+        Não se faz um label sem conexão com input, pois dificulta o trabalho dos mecânismos de busca do google e com isso afeta a forma que os usuários encontram seu site.
+
+        Sempre usar label na palavra que quer fazer conexão com o input, isso é uma regra.
+
+        Quando o usuário clicar no botão de enviar após preencher o formulário, será solicitado o arquivo .js ou .php ou qualquer outra linguagem que você esteja utilizando pra receber esses dados.
+
+        por padrão, quando não colocar nenhum method vai ser get e irá mostrar na url, mas se no method usar ="post" não irá mostrar na url.
+
+        Quando usar GET ou POST?
+        O method="get" será usado quando em primeiro lugar seus dados não forem sensíveis, se não estiver pedindo senha, cartão de crédito, endereço, cep, ok. E também caso queira que a URL seja >compartilhavel< ai usa method="get". O method get tem um limite de 3k de bits, não podem ultrapassar 3 mil letras para usar o get e também não pode usar get para envio de fotos ou qualquer outro tipo de arquivo, nesse caso tem que usar o POST.
+
+        Caso esteja trabalhando com cartão de crédito e senha o ideal é trabalhar com https (estudar no futuro sobre https) para proteger dados.
+
+        Usar o method="post" quando for o contrário do descrito acima.
+
+        -------------------------------------------------
+
+        Para o input ser obrigatório coloque dentro do input um parâmetro chamado required.
+
+        e se quiser solicitar um tamanho minimo de usuario ou senha, usar minlength="numeroAqui" e caso queira limitar a quantidade de carácteres é só digitar maxlength="numeroAqui"
+
+        Para aumentar o tamanho da caixa ou diminuir é só usar o parâmetro size="numeroAqui"
+
+        Para deixar uma mensagem pré-colocada na caixa de input é só usar o parâmetro placeholder="escrevaAqui"
+
+        Para o autocomplete="" saber oque é o input e completar de forma correta adicione ele no <form> e depois vá até o <input> e adicione ele novamente com outras opções, no <form> ele só funciona como on e off, caso ele esteja on e no input esteja colocado o que ele é, ele ira auto completar corretamente para o usuário
+    -->
+
+    <h1>Meu primeiro formulário</h1>
+    <form action="">
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

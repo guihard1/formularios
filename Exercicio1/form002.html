@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        Para o input ser obrigatório coloque dentro do input um parâmetro chamado required.
+
+        e se quiser solicitar um tamanho minimo de usuario ou senha, usar minlength="numeroAqui" e caso queira limitar a quantidade de carácteres é só digitar maxlength="numeroAqui"
+
+        Para aumentar o tamanho da caixa ou diminuir é só usar o parâmetro size="numeroAqui"
+
+        Para deixar uma mensagem pré-colocada na caixa de input é só usar o parâmetro placeholder="escrevaAqui"
+
+        Para o autocomplete="" saber oque é o input e completar de forma correta adicione ele no <form> e depois vá até o <input> e adicione ele novamente com outras opções, no <form> ele só funciona como on e off, caso ele esteja on e no input esteja colocado o que ele é, ele ira auto completar corretamente para o usuário
+    -->
+    <h1>Teste de Formulário</h1>
+    <form action="" method="post">
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required>
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
