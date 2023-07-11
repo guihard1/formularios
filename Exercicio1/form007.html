@@ -24,6 +24,23 @@
                 </optgroup>
             </select>
         </p>
+        <p>
+            <!--
+                Para usar um input que permite o usuário escolher pré selecionado ou digitar, é só criar com um datalist dando a ele um id e dentro do input colocar o parâmetro list="nomeDoid"
+            -->
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="prof" id="iprof" list="listaprof">
+            <datalist id="listaprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem:</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p> 
     </form>
 </body>
 </html>
